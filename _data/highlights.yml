@@ -1,0 +1,219 @@
+# 메인 페이지 "M.Ax" 소개 · 대표 성과 · 대표 사례
+# 출처: 연구실 소개자료 (Selected Research Projects '20~26, 2026.10.07)
+
+tagline: "Manufacturing AX (M.Ax) — process domain knowledge combined with AI"
+tagline_ko: "제조 AX (M.Ax) : 공정 도메인 & AI 결합"
+
+# 대표 성과 숫자 (as_of 기준)
+stats_as_of: "Oct. 2026"
+stats:
+  - value: 21
+    label: National & industry projects
+    label_ko: 국책/산학 과제 (연차과제 포함, 최근 6년)
+  - value: 13
+    label: Project topics
+    label_ko: 과제 주제 (연차 통합, 최근 6년)
+  - value: 36
+    label: SCIE journal papers
+    label_ko: SCIE 저널
+  - value: 5
+    label: Awards
+    label_ko: 수상성과 (최근 6년)
+  - value: 5
+    label: Field deployments & tech transfers
+    label_ko: 산업 현장 적용 및 기술이전 (최근 6년)
+
+partners:
+  - Hyundai Steel
+  - Hyundai Motor (Hyundai NGV)
+  - EcoPro BM
+  - Graphene Square
+  - Samjung Industry
+  - CAS
+partners_ko: 현대제철 · 현대자동차(현대엔지비) · 에코프로비엠 · 그래핀스퀘어 · 삼정산업 · 카스 등
+partner_note: Hyundai Steel Collaborative Research Lab (현대제철 산학협력연구실)
+
+# 대표 사례 — 모든 항목은 Research 페이지에 분야(area)별로 표시되고, featured: true 인 항목만 홈에 표시됩니다 (현재 7개). 바꾸려면 true/false 만 수정.
+categories:
+  - id: inspection
+    title: Quality Inspection
+    title_ko: 공정 품질검사
+  - id: prediction
+    title: Quality Prediction & Optimization
+    title_ko: 품질 예측 및 최적화
+  - id: diagnosis
+    title: Anomaly Detection & Fault Diagnosis
+    title_ko: 설비 이상탐지 및 고장진단
+  - id: vision
+    title: Automation & Safety Vision
+    title_ko: 자동화·안전 머신비전
+  - id: smart-material
+    title: Smart Materials & Vibration Control
+    title_ko: 스마트재료·진동제어
+
+cases:
+  # ---- 공정 품질검사
+  - category: inspection
+    area: quality
+    year: 2022–2025
+    partner: Hyundai Steel, KEIT
+    title: Automatic Classification of Special-Steel Surface Defects
+    title_ko: 특수강 표면결함 자동 분류
+    image: /assets/images/cases/steel-mflt.jpg
+    featured: true
+    text: Magnetic flux leakage (MFLT) NDT signals from steel bars; semi-supervised AI model detecting and classifying 7 defect types.
+    results:
+      - "Over 99% accuracy on 7 defect classes"
+      - "Deployed at the Pohang plant (2024)"
+      - "1 SCIE paper, 2 conference papers"
+  - category: inspection
+    area: quality
+    year: 2023–2025
+    partner: Hyundai Steel
+    title: Tip-Crack Defect Detection for Large H-Beams
+    title_ko: 대형 H-beam 팁터짐 불량 검출
+    image: /assets/images/cases/hbeam-tipcrack.jpg
+    featured: false
+    text: Processing of continuous 3D scan data to detect tip-crack defects on large H-beams.
+    results:
+      - "100% detection rate"
+      - "Field validation started (2025–)"
+  - category: inspection
+    area: quality
+    year: 2025
+    partner: Hyundai Steel
+    title: Vision Recognition of Marking Codes on Rolling-Mill Feedstock
+    title_ko: 대형압연 장입 소재 마킹 비전 인식 시스템
+    image: /assets/images/cases/marking-ocr.jpg
+    featured: true
+    text: Marking-code recognition for steel materials, fused with process information.
+    results:
+      - "Over 98% accuracy, including low-quality markings"
+      - "Installed on site"
+
+  # ---- 품질 예측 및 최적화
+  - category: prediction
+    area: quality
+    year: 2023
+    partner: EcoPro BM
+    title: Discharge-Capacity Prediction for Battery Cathode Material
+    title_ko: 이차전지 양극재 방전용량 품질 예측
+    image: /assets/images/cases/battery-capacity.jpg
+    featured: true
+    text: Identified the process variables that drive quality and built an AI model that predicts discharge capacity in real time from process data. Lab measurement normally takes more than 6 days.
+    results:
+      - "Prediction error of about ±0.57 mAh/g"
+  - category: prediction
+    area: quality
+    year: 2023–2025
+    partner: Hyundai Steel
+    title: Weight Prediction and Cut-Length Optimization of Semi-Finished Steel
+    title_ko: 철강 반제품 중량 예측 및 절단길이 최적화
+    image: /assets/images/cases/slab-weight.jpg
+    featured: false
+    text: Predicts bulging and unit weight of cast semi-finished products and gives cut-length optimization guidance.
+    results:
+      - "Error improved by 18 percentage points over the current method"
+      - "2 domestic conference papers"
+  - category: prediction
+    area: quality
+    year: 2021–2023
+    partner: Hyundai Steel
+    title: Quality Prediction and Tempcore Cooling Optimization for Special Steel
+    title_ko: 특수강 품질 예측 및 템프코어 냉각 최적화
+    image: /assets/images/cases/tempcore-rl.jpg
+    featured: false
+    text: AI model predicting rebar yield strength, a multiphysics digital-twin model, and reinforcement-learning optimization of cooling variables.
+    results:
+      - "Better yield-strength quality and more efficient cooling-water use"
+      - "1 SCIE paper, 2 conference papers"
+
+  # ---- 설비 이상탐지 및 고장진단
+  - category: diagnosis
+    area: diagnosis
+    year: 2023–2024
+    partner: Wind Energy HRD Program
+    title: Bearing Fault Detection for Rotating Machinery
+    title_ko: 회전체 설비 베어링 고장탐지
+    image: /assets/images/cases/bearing-fault.jpg
+    featured: false
+    text: Time–frequency multi-domain model that uses bearing physics, with attention-based condition monitoring that is robust to noise.
+    results:
+      - "99% detection accuracy (CWRU dataset)"
+      - "2 SCIE papers"
+  - category: diagnosis
+    area: diagnosis
+    year: 2026
+    partner: Glocal University Program
+    title: Fault Diagnosis Using Multi-Relational Process Graphs
+    title_ko: 산업공정 다중관계 기반 고장진단
+    image: /assets/images/cases/tep-graph.jpg
+    featured: true
+    text: Graph model of the many relations between pieces of equipment, combining data-driven and process-knowledge relations.
+    results:
+      - "State-of-the-art 96.8% on the TEP benchmark"
+      - "1 SCIE paper in preparation"
+  - category: diagnosis
+    area: diagnosis
+    year: 2026
+    partner: Glocal University Program
+    title: Process-Aware Equipment Anomaly Detection
+    title_ko: 공정정보 기반 설비 이상탐지
+    image: /assets/images/cases/swat-anomaly.jpg
+    featured: false
+    text: Graph anomaly-detection model built from the equipment layout. It encodes the sensor–equipment hierarchy and process flow, and detects when the process becomes abnormal by learning from normal operation.
+    results:
+      - "State of the art on the SWaT and WADI benchmarks"
+      - "1 SCIE paper in preparation"
+
+  # ---- 자동화·안전 머신비전
+  - category: vision
+    area: vision
+    year: 2023
+    partner: Hyundai Motor
+    title: LiDAR-Based Hazardous-Zone Intrusion Monitoring
+    title_ko: 라이다 기반의 위험구역 출입 감시 시스템
+    image: /assets/images/cases/lidar-fence.jpg
+    featured: true
+    # TODO: 소개자료 원문의 설명이 베어링 과제 문구로 잘못 들어가 있어 아래 문장은 새로 작성함 — 확인 필요
+    text: A 3D LiDAR virtual safety fence that detects workers entering hazardous zones in real time.
+    results:
+      - "100% intrusion-detection accuracy"
+      - "Demonstrated at Hyundai Motor & Kia E-Forest TECH 2023"
+  - category: vision
+    area: vision
+    year: 2020
+    partner: Hyundai Motor
+    title: Automatic Inspection of Vehicle LiDAR Misalignment
+    title_ko: 라이다 센서 오정렬 자동 검사 시스템
+    image: /assets/images/cases/lidar-misalign.jpg
+    featured: true
+    text: One-shot inspection of vehicle LiDAR misalignment that does not need access to the LiDAR's own data.
+    results:
+      - "Mounting-error precision under 0.1 mm"
+      - "4 SCIE papers"
+  - category: vision
+    area: vision
+    year: 2021–2023
+    partner: Hyundai Steel
+    title: Machine Vision for Roll-to-Roll Tension Monitoring
+    title_ko: Roll-to-roll 텐션 모니터링 머신비전
+    image: /assets/images/cases/r2r-tension.jpg
+    featured: false
+    text: Non-contact tension monitoring inside a high-temperature vacuum chamber, using lighting and image processing designed for specular (mirror-like) materials.
+    results:
+      - "1 KCI paper"
+
+  # ---- 스마트재료·진동제어 (소개자료 숨김 슬라이드 6)
+  - category: smart-material
+    area: smart-material
+    year: 2020–2025
+    partner: National Research Foundation of Korea
+    title: Reinforcement-Learning Vibration Control with Smart Materials
+    title_ko: 강화학습기반 진동제어 최적화
+    image: /assets/images/cases/vibration-rl.jpg
+    featured: true
+    text: Smart vibration absorber that adapts to its operating environment, reflecting time-varying nonlinear behavior by combining reinforcement learning with vibration-dynamics knowledge.
+    results:
+      - "Up to 58% vibration-energy reduction (at 60 Hz)"
+      - "2 SCIE papers"

@@ -1,0 +1,13 @@
+{% comment %} include.pub : publications.yml 의 한 항목 {% endcomment %}
+{% assign p = include.pub %}
+<li class="pub" data-areas="{{ p.areas | join: ' ' }}">
+  <p class="pub-title">{% if p.status %}<span class="status">{{ p.status }}</span> {% endif %}{{ p.title }}</p>
+  {% if p.authors %}<p class="pub-authors">{{ p.authors | replace: 'Young-Keun Kim', '<strong>Young-Keun Kim</strong>' | replace: '김영근', '<strong>김영근</strong>' }}</p>{% endif %}
+  <p class="pub-venue">
+    {% if p.venue %}<em>{{ p.venue }}</em>{% if p.details %}, {{ p.details }}{% endif %}{% unless p.details contains p.year %}, {{ p.year }}{% endunless %}{% else %}{{ p.year }}{% endif %}
+    {% if p.index %}<span class="badge">{{ p.index }}</span>{% endif %}
+    {% if p.note %}<span class="badge badge-note">{{ p.note }}</span>{% endif %}
+    {% if p.doi %}<a class="pub-link" href="https://doi.org/{{ p.doi }}">DOI</a>{% endif %}
+    {% if p.url %}<a class="pub-link" href="{{ p.url }}">Link</a>{% endif %}
+  </p>
+</li>

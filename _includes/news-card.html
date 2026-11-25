@@ -1,0 +1,13 @@
+{% assign n = include.item %}
+<article class="news-card">
+  {% if n.url %}<a class="news-card-link" href="{{ n.url }}">{% endif %}
+  <div class="news-img{% unless n.image %} empty{% endunless %}">
+    {% if n.image %}<img src="{{ n.image | relative_url }}" alt="" loading="lazy">{% else %}<span>{{ n.tag }}</span>{% endif %}
+  </div>
+  <div class="news-body">
+    <p class="news-meta"><span class="tag">{{ n.tag }}</span> <time>{{ n.date }}</time></p>
+    <p class="news-title">{{ n.title }}</p>
+    {% if n.text and include.full %}<p class="news-text">{{ n.text }}</p>{% endif %}
+  </div>
+  {% if n.url %}</a>{% endif %}
+</article>

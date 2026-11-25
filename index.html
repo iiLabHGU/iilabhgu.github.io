@@ -1,4 +1,138 @@
 ---
-layout: home
-author_profile: true
+layout: default
+title: Home
+body_class: home
 ---
+{% assign lab = site.lab %}
+{% assign hl = site.data.highlights %}
+<section class="hero">
+  <div class="container hero-inner">
+    <p class="eyebrow">Handong Global University · Mechanical and Control Engineering</p>
+    <h1>{{ site.title }}</h1>
+    <p class="hero-ko">{{ site.title_ko }} · {{ lab.pi_ko }}</p>
+    <p class="hero-tagline">{{ hl.tagline }}<span>{{ hl.tagline_ko }}</span></p>
+    <p class="hero-lead">
+      We put process domain knowledge into AI models and deploy them on real
+      production lines — with steel, automotive and battery-material partners.
+    </p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="#cases">Selected projects</a>
+      <a class="btn btn-ghost" href="{{ '/research/' | relative_url }}">Explore our research</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <h2>Research Areas</h2>
+      <a class="more" href="{{ '/research/' | relative_url }}">All research →</a>
+    </div>
+    <div class="card-grid cols-4">
+      {% for a in site.data.research %}{% if a.main %}
+        <a class="area-card" href="{{ '/research/' | append: a.id | append: '/' | relative_url }}">
+          <div class="area-img"><img src="{{ a.image | relative_url }}" alt="" loading="lazy"></div>
+          <div class="area-body">
+            <h3>{{ a.title }}</h3>
+            <p class="area-ko">{{ a.title_ko }}</p>
+            <ul class="topics">{% for t in a.topics %}<li>{{ t }}</li>{% endfor %}</ul>
+          </div>
+        </a>
+      {% endif %}{% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="stats-band" aria-label="Key results">
+  <div class="container">
+    <ul class="stats">
+      {% for s in hl.stats %}
+        <li><span class="stat-value">{{ s.value }}</span><span class="stat-label">{{ s.label }}</span><span class="stat-ko">{{ s.label_ko }}</span></li>
+      {% endfor %}
+    </ul>
+    <div class="partners">
+      <span class="partners-label">Industry partners</span>
+      <span class="partners-list">{{ hl.partners | join: ' · ' }} and more</span>
+      <span class="partners-note">{{ hl.partner_note }}</span>
+    </div>
+    <p class="stats-note">As of {{ hl.stats_as_of }}; counts for the last six years unless noted.</p>
+  </div>
+</section>
+
+<section class="section" id="cases">
+  <div class="container">
+    <div class="section-head">
+      <h2>Selected Projects <span class="h-ko">대표 사례 ’20–’26</span></h2>
+      <div class="carousel-nav">
+        <a class="more" href="{{ '/projects/' | relative_url }}">All projects →</a>
+        <button class="car-btn" data-dir="-1" aria-label="Previous projects" aria-controls="case-track">‹</button>
+        <button class="car-btn" data-dir="1" aria-label="Next projects" aria-controls="case-track">›</button>
+      </div>
+    </div>
+    <div class="case-track" id="case-track" tabindex="0" aria-label="Selected projects">
+      {% for k in hl.cases %}{% if k.featured %}
+        <article class="case">
+          {% if k.image %}<div class="case-img"><img src="{{ k.image | relative_url }}" alt="" loading="lazy"></div>{% endif %}
+          <div class="case-body">
+            <p class="case-meta">{{ k.year }} · {{ k.partner }}</p>
+            <h4>{{ k.title }}</h4>
+            <p class="case-ko">{{ k.title_ko }}</p>
+            <p class="case-text">{{ k.text }}</p>
+            <ul class="case-results">{% for r in k.results %}<li>{{ r }}</li>{% endfor %}</ul>
+          </div>
+        </article>
+      {% endif %}{% endfor %}
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <h2>News &amp; Activities</h2>
+      <a class="more" href="{{ '/news/' | relative_url }}">All news →</a>
+    </div>
+    <div class="news-cards">
+      {% for n in site.data.news limit: 4 %}{% include news-card.html item=n %}{% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container two-col">
+    <div>
+      <div class="section-head">
+        <h2>Recent Publications</h2>
+        <a class="more" href="{{ '/publications/' | relative_url }}">All →</a>
+      </div>
+      <ol class="pub-list compact">
+        {% assign shown = 0 %}
+        {% for p in site.data.publications.international %}
+          {% if p.status == nil and shown < 5 %}{% include pub-item.html pub=p %}{% assign shown = shown | plus: 1 %}{% endif %}
+        {% endfor %}
+      </ol>
+    </div>
+    <div>
+      <div class="section-head">
+        <h2>Videos</h2>
+        <a class="more" href="{{ lab.links.youtube }}">YouTube →</a>
+      </div>
+      <div class="video-stack">
+        {% for v in lab.videos %}
+          <div class="video"><iframe src="https://www.youtube.com/embed/{{ v }}" title="IILab video {{ forloop.index }}" loading="lazy" allowfullscreen></iframe></div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-tight">
+  <div class="container cta">
+    <div>
+      <h2>Interested in joining IILab?</h2>
+      <p>We welcome motivated graduate students and undergraduate researchers who want to build AI systems that work in real industry.</p>
+    </div>
+    <a class="btn btn-primary" href="{{ '/join/' | relative_url }}">Join Us</a>
+  </div>
+</section>
