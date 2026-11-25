@@ -1,8 +1,10 @@
 # Industrial Intelligence Lab (IILab) Website
 
-한동대학교 기계제어공학부 산업지능화 연구실 웹페이지 — https://ssslab-hgu.github.io
+한동대학교 기계제어공학부 산업지능화 연구실 웹페이지 — https://iilabhgu.github.io
 
-Jekyll 기반이며 GitHub Pages에서 자동으로 빌드됩니다. `master` 브랜치에 push 하면 몇 분 후 사이트에 반영됩니다.
+저장소: https://github.com/iiLabHGU/iilabhgu.github.io (예전 주소 ssslab-hgu.github.io 는 이 사이트로 자동 이동)
+
+Jekyll 기반이며 GitHub Pages에서 자동으로 빌드됩니다. `main` 브랜치에 push 하면 몇 분 후 사이트에 반영됩니다.
 
 ## 내용 수정하기 (대부분 여기만 수정하면 됩니다)
 

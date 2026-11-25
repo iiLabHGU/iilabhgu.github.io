@@ -42,7 +42,7 @@ og_image: /assets/images/og-default.jpg
 verification:
   google: ""
   naver: ""
-url: "https://ssslab-hgu.github.io"
+url: "https://iilabhgu.github.io"
 baseurl: ""
 lang: en
 
@@ -63,7 +63,7 @@ lab:
     orcid: "https://orcid.org/0000-0002-5373-1128"
     researchgate: "https://www.researchgate.net/profile/Young-Keun-Kim-3/research"
     youtube: "https://www.youtube.com/channel/UCbqlYFv4Ag01rmWbIfQUsHw"
-    github: "https://github.com/ssslab-hgu"
+    github: "https://github.com/iiLabHGU"
   # 홈 화면에 표시할 YouTube 영상 ID
   videos:
     - VJTfaUGpmU8
