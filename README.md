@@ -25,6 +25,14 @@ Jekyll 기반이며 GitHub Pages에서 자동으로 빌드됩니다. `master` �
 - 논문의 `areas` 값을 지정하면 해당 연구분야 상세 페이지 하단에 자동으로 표시되고, Publications 페이지에서 분야별 필터가 가능합니다.
 - 각 파일의 `TODO` 주석이 최신화가 필요한 부분입니다.
 
+## 검색 최적화 (SEO)
+
+- 검색결과 제목·설명: 각 페이지 맨 위의 `seo_title`, `description` (연구분야 상세 페이지는 `_data/research.yml`의 `seo_title`, `description`, `intro_ko`)
+- 사이트 기본 설명·키워드: `_config.yml`의 `description`, `keywords`
+- Google Search Console / 네이버 서치어드바이저 소유 확인 코드: `_config.yml`의 `verification:` 에 입력
+- 사이트맵은 `/sitemap.xml`로 자동 생성됩니다. 두 서비스에 이 주소를 제출하세요.
+- 공유 미리보기 이미지: `assets/images/og-default.jpg`
+
 ## 구조
 
 ```

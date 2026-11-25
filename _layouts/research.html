@@ -37,6 +37,7 @@ layout: default
 
   <article class="prose">
     {% if area.summary %}<p class="lead">{{ area.summary }}</p>{% endif %}
+    {% if area.intro_ko %}<p class="intro-ko">{{ area.intro_ko }}</p>{% endif %}
     {{ content }}
 
     {% assign pubs = site.data.publications %}

@@ -58,12 +58,6 @@
       track.scrollBy({ left: step() * parseInt(b.getAttribute('data-dir'), 10), behavior: 'smooth' });
     });
   });
-  track.addEventListener('keydown', function (e) {
-    if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
-      e.preventDefault();
-      track.scrollBy({ left: step() * (e.key === 'ArrowRight' ? 1 : -1), behavior: 'smooth' });
-    }
-  });
   track.addEventListener('scroll', function () { window.requestAnimationFrame(update); });
   window.addEventListener('resize', update);
   update();

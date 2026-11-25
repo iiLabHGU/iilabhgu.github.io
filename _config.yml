@@ -9,9 +9,39 @@ title: "Industrial Intelligence Lab"
 title_ko: "산업지능화 연구실"
 short_name: "IILab"
 mark: "IIL"                # 좌측 상단 로고 글자
+university_ko: "한동대학교"
+# 검색 결과에 표시되는 기본 설명 (페이지별 description이 없을 때 사용, 120~160자 권장)
 description: >-
-  Industrial Intelligence Lab at Handong Global University — industrial AI,
-  2D/3D machine vision, and smart-material sensors and vibration control.
+  한동대학교 산업지능화 연구실(IILab)은 공정 도메인 지식과 AI를 결합한 제조 AX를
+  연구합니다. 품질검사·품질예측, 설비 이상탐지·고장진단·고장원인 분석, 머신비전,
+  스마트재료 진동제어. Industrial AI for manufacturing at Handong Global University.
+# 연구실이 다루는 주제 — 검색엔진용 구조화 데이터(schema.org knowsAbout)에 사용
+keywords:
+  - 산업지능화
+  - 제조 AX
+  - 제조 AI
+  - 산업 AI
+  - 고장진단
+  - 고장원인 분석
+  - 설비 이상탐지
+  - 예지보전
+  - 품질예측
+  - 품질검사
+  - 머신비전
+  - 스마트팩토리
+  - Industrial AI
+  - Manufacturing AX
+  - Fault Diagnosis
+  - Root Cause Analysis
+  - Anomaly Detection
+  - Predictive Maintenance
+  - Machine Vision
+# 공유(카카오톡·SNS) 미리보기 기본 이미지
+og_image: /assets/images/og-default.jpg
+# 검색엔진 소유 확인 코드 (Google Search Console / 네이버 서치어드바이저에서 발급받아 입력)
+verification:
+  google: ""
+  naver: ""
 url: "https://ssslab-hgu.github.io"
 baseurl: ""
 lang: en
@@ -51,7 +81,6 @@ permalink: pretty
 timezone: Asia/Seoul
 
 plugins:
-  - jekyll-seo-tag
   - jekyll-sitemap
   - jekyll-redirect-from
 

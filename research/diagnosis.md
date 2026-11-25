@@ -8,7 +8,7 @@ toc:
   - { id: other, title: "Other signal AI" }
 ---
 
-## Process-Knowledge Graph Models <span class="h-ko">공정 지식을 반영한 이상탐지 · 고장진단</span> {#process}
+## Process-Knowledge Graph Models <span class="h-ko">공정 지식을 반영한 이상탐지 · 고장진단 · 고장원인 분석</span> {#process}
 
 We build process expertise (equipment structure, process flow and operating
 knowledge) into AI models for anomaly detection and root-cause diagnosis in

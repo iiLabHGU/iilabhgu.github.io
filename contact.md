@@ -1,5 +1,6 @@
 ---
 title: Contact
+description: "한동대학교 산업지능화 연구실 연락처와 위치 — 경북 포항시 북구 한동로 558 뉴턴홀 107호."
 subtitle: 오시는 길
 permalink: /contact/
 redirect_from:

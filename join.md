@@ -1,5 +1,6 @@
 ---
 title: Join Us
+description: "한동대학교 산업지능화 연구실 대학원생·학부연구생 모집 — 제조 AI, 고장진단, 머신비전, 스마트재료 연구에 참여하세요."
 subtitle: 대학원생 · 학부연구생 모집
 permalink: /join/
 redirect_from:

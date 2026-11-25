@@ -2,11 +2,18 @@
 #   id     : 상세 페이지 파일명 및 논문(publications.yml)의 areas 값과 일치해야 함
 #   main   : true 이면 홈과 연구 페이지에 큰 카드로 표시되는 핵심 분야 (현재 4개), false 이면 "Other research"
 #   image  : 카드 이미지 경로
+#   seo_title / description : 검색결과(구글·네이버)에 표시되는 제목과 설명
+#   intro_ko : 상세 페이지 상단에 보이는 한글 소개 (검색 키워드 포함)
 #   short  : Research 페이지 카드에 쓰는 한 줄 요약
 #   topics : 카드에 표시할 세부 주제 (한글)
 
 - id: quality
   main: true
+  seo_title: 공정 품질검사·품질예측·공정최적화 AI
+  description: >-
+    제조 공정 데이터와 AI로 표면결함 자동 분류, 비전 품질검사, 물성·품질 예측, 공정 운전조건 최적화를 연구합니다. 철강·이차전지 소재 현장 적용 사례. Manufacturing quality AI.
+  intro_ko: >-
+    제조 현장의 품질 문제를 AI로 해결합니다. 공정 데이터와 공정 도메인 지식을 결합해 생산 라인에서 표면결함을 자동으로 검출·분류하고(AI 품질검사), 소재의 물성과 제품 품질을 사전에 예측하며(품질예측), 강화학습과 디지털 트윈으로 공정 운전 조건을 최적화합니다. 철강, 이차전지 양극재 등 실제 산업 현장에 적용해 왔습니다.
   title: Process Quality Inspection, Prediction & Optimization
   title_ko: 공정 품질검사·예측·최적화
   image: /assets/images/research/area-industrial-ai.jpg
@@ -22,6 +29,11 @@
 
 - id: diagnosis
   main: true
+  seo_title: 설비 이상탐지·고장진단·고장원인 분석 AI
+  description: >-
+    공정 지식을 반영한 그래프 AI로 제조 설비 이상탐지, 고장진단, 고장원인 분석(근본원인 추적), 회전기계·베어링 진단, 잔여수명 예측 등 예지보전 기술을 연구합니다.
+  intro_ko: >-
+    공정 도메인 지식을 반영한 AI로 제조 설비의 이상을 조기에 탐지하고, 고장진단과 고장원인 분석(근본원인 추적)을 수행합니다. 센서–설비–공정 흐름의 관계를 그래프 모델로 표현해 공정 이상탐지 정확도를 높이고, 이상이 발생한 원인 설비를 설명합니다. 또한 회전기계·베어링 고장진단, 모터 전류 신호 분석, 잔여수명(RUL) 예측 등 예지보전(PdM) 기술을 연구합니다.
   title: Equipment Anomaly Detection & Fault Diagnosis
   title_ko: 설비 이상탐지·고장진단
   image: /assets/images/research/area-diagnosis.jpg
@@ -37,6 +49,11 @@
 
 - id: vision
   main: true
+  seo_title: 자동화·안전 머신비전 (2D 카메라·3D 라이다)
+  description: >-
+    2D 카메라와 3D 라이다(LiDAR) 기반 머신비전으로 부품 품질검사, 조립·장착오차 검사, 라이다 캘리브레이션, 위험구역 작업자 안전 모니터링을 연구합니다.
+  intro_ko: >-
+    2D 카메라와 3D 라이다(LiDAR)를 이용한 머신비전 시스템을 개발합니다. 부품 품질검사와 조립 검사 등 생산 자동화, 라이다 자동 캘리브레이션과 차량 장착오차 검사, 라이다 가상 안전펜스를 이용한 위험구역 작업자 침입·이상행동 탐지 등 산업 안전 분야에 적용합니다.
   title: Machine Vision for Automation & Safety
   title_ko: 자동화·안전 머신비전
   image: /assets/images/research/area-safety-vision.jpg
@@ -52,6 +69,11 @@
 
 - id: smart-material
   main: true
+  seo_title: 스마트재료·진동제어 (MR 엘라스토머·강화학습)
+  description: >-
+    자기유변(MR) 스마트재료 기반 강성가변 진동제어 모듈, 강화학습 기반 능동 진동제어, 진동·자기장·마찰 측정용 유연(Flexible) 센서를 연구합니다.
+  intro_ko: >-
+    자기장에 따라 강성이 바뀌는 자기유변(MR) 스마트재료로 강성가변 진동제어 모듈을 개발하고, 강화학습 기반 진동제어 기법으로 진동 에너지를 줄입니다. 또한 진동, 자기장, 마찰을 측정하는 유연(Flexible) 센서를 연구합니다.
   title: Smart Materials & Vibration Control
   title_ko: 스마트재료·진동제어
   image: /assets/images/research/area-smart-material.jpg

@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Research
+seo_title: "연구분야 — 제조 AI 품질예측 · 고장진단 · 머신비전 | 산업지능화 연구실 IILab"
+description: "산업지능화 연구실 연구분야: AI 품질검사·품질예측, 설비 이상탐지·고장진단·고장원인 분석, 2D/3D 머신비전, 스마트재료 진동제어. 철강·자동차·이차전지 산학협력 대표 사례."
 subtitle: 연구분야 — 품질검사·예측 · 이상탐지·고장진단 · 머신비전 · 스마트재료
 permalink: /research/
 ---
@@ -14,7 +16,7 @@ permalink: /research/
 <div class="card-grid cols-4 compact">
   {% for a in site.data.research %}{% if a.main %}
     <a class="area-card" href="{{ '/research/' | append: a.id | append: '/' | relative_url }}">
-      <div class="area-img"><img src="{{ a.image | relative_url }}" alt="" loading="lazy"></div>
+      <div class="area-img"><img src="{{ a.image | relative_url }}" alt="{{ a.title_ko }} — {{ a.title }}" loading="lazy"></div>
       <div class="area-body">
         <h3>{{ a.title }}</h3>
         <p class="area-ko">{{ a.title_ko }}</p>
@@ -34,7 +36,7 @@ permalink: /research/
         <div class="case-list">
           {% for k in ks %}
             <article class="case">
-              {% if k.image %}<div class="case-img"><img src="{{ k.image | relative_url }}" alt="" loading="lazy"></div>{% endif %}
+              {% if k.image %}<div class="case-img"><img src="{{ k.image | relative_url }}" alt="{{ k.title_ko }} — {{ k.title }}" loading="lazy"></div>{% endif %}
               <div class="case-body">
                 <p class="case-meta">{{ k.year }} · {{ k.partner }}</p>
                 <h4>{{ k.title }}</h4>
@@ -56,7 +58,7 @@ permalink: /research/
 <div class="other-research">
   {% for a in site.data.research %}{% unless a.main %}
     <a class="other-card" href="{{ '/research/' | append: a.id | append: '/' | relative_url }}">
-      <img src="{{ a.image | relative_url }}" alt="" loading="lazy">
+      <img src="{{ a.image | relative_url }}" alt="{{ a.title_ko }} — {{ a.title }}" loading="lazy">
       <div>
         <h3>{{ a.title }} <span class="h-ko">{{ a.title_ko }}</span></h3>
         <p>{{ a.summary }}</p>

@@ -1,0 +1,32 @@
+{%- comment -%} 구조화 데이터(JSON-LD): 검색엔진이 연구실 이름(국문/영문), 소속, 연구주제를 정확히 인식하도록 돕습니다. {%- endcomment -%}
+{%- assign lab = site.lab -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ResearchOrganization",
+  "name": "{{ site.title_ko }} ({{ site.title }})",
+  "alternateName": ["{{ site.title_ko }}", "{{ site.title }}", "{{ site.short_name }}", "{{ site.university_ko }} {{ site.title_ko }}", "Handong IILab"],
+  "url": "{{ '/' | absolute_url }}",
+  "logo": "{{ '/assets/images/logo.png' | absolute_url }}",
+  "description": "{{ site.description | strip_newlines | strip | escape }}",
+  "email": "mailto:{{ lab.email }}",
+  "telephone": "{{ lab.phone }}",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "558 Handong-ro, Heunghae-eup, Buk-gu (Newton Hall 107)",
+    "addressLocality": "Pohang",
+    "addressRegion": "Gyeongbuk",
+    "postalCode": "37554",
+    "addressCountry": "KR"
+  },
+  "parentOrganization": {
+    "@type": "CollegeOrUniversity",
+    "name": "{{ site.university_ko }} {{ lab.affiliation_ko | remove: site.university_ko | strip }}",
+    "alternateName": "{{ lab.affiliation }}",
+    "url": "https://www.handong.edu"
+  },
+  "member": { "@type": "Person", "name": "{{ lab.pi_ko | remove: ' 교수' }}", "alternateName": "{{ lab.pi | remove: 'Prof. ' }}", "jobTitle": "Professor" },
+  "knowsAbout": [{% for k in site.keywords %}"{{ k }}"{% unless forloop.last %}, {% endunless %}{% endfor %}],
+  "sameAs": [{% for l in lab.links %}"{{ l[1] }}"{% unless forloop.last %}, {% endunless %}{% endfor %}]
+}
+</script>
