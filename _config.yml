@@ -12,11 +12,16 @@ mark: "IIL"                # 좌측 상단 로고 글자
 university_ko: "한동대학교"
 # 검색 결과에 표시되는 기본 설명 (페이지별 description이 없을 때 사용, 120~160자 권장)
 description: >-
-  한동대학교 산업지능화 연구실(IILab)은 공정 도메인 지식과 AI를 결합한 제조 AX를
+  한동대학교 기계제어공학부 김영근 교수 산업지능화 연구실(IILab)은 공정 도메인 지식과 AI를 결합한 제조 AX를
   연구합니다. 품질검사·품질예측, 설비 이상탐지·고장진단·고장원인 분석, 머신비전,
   스마트재료 진동제어. Industrial AI for manufacturing at Handong Global University.
 # 연구실이 다루는 주제 — 검색엔진용 구조화 데이터(schema.org knowsAbout)에 사용
 keywords:
+  - 한동대학교
+  - 한동대학교 기계제어공학부
+  - 한동대학교 김영근 교수
+  - 김영근 교수
+  - 한동대 산업지능화 연구실
   - 산업지능화
   - 제조 AX
   - 제조 AI
