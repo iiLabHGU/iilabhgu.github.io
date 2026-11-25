@@ -1,0 +1,9 @@
+---
+layout: page
+title: News & Activities
+subtitle: 수상 · 학회발표 · 산학협력 소식
+permalink: /news/
+---
+<div class="news-cards full">
+  {% for n in site.data.news %}{% include news-card.html item=n full=true %}{% endfor %}
+</div>

@@ -1,0 +1,56 @@
+---
+layout: default
+---
+{% assign area = site.data.research | where: "id", page.area | first %}
+<section class="page-hero">
+  <div class="container">
+    <p class="eyebrow"><a href="{{ '/research/' | relative_url }}">Research</a></p>
+    <h1>{{ area.title | default: page.title }}</h1>
+    {% if area.title_ko %}<p class="page-sub">{{ area.title_ko }}</p>{% endif %}
+  </div>
+</section>
+
+<div class="container research-layout">
+  <aside class="research-side">
+    <p class="side-label">Research areas</p>
+    <ul>
+      {% for a in site.data.research %}{% if a.main %}
+        <li><a href="{{ '/research/' | append: a.id | append: '/' | relative_url }}"{% if a.id == page.area %} class="active"{% endif %}>{{ a.title }}</a></li>
+      {% endif %}{% endfor %}
+    </ul>
+    {% assign others = site.data.research | where_exp: "a", "a.main != true" %}
+    {% if others.size > 0 %}
+    <p class="side-label">Other research</p>
+    <ul>
+      {% for a in site.data.research %}{% unless a.main %}
+        <li><a href="{{ '/research/' | append: a.id | append: '/' | relative_url }}"{% if a.id == page.area %} class="active"{% endif %}>{{ a.title }}</a></li>
+      {% endunless %}{% endfor %}
+    </ul>
+    {% endif %}
+    {% if page.toc %}
+      <p class="side-label">On this page</p>
+      <ul class="toc">
+        {% for t in page.toc %}<li><a href="#{{ t.id }}">{{ t.title }}</a></li>{% endfor %}
+      </ul>
+    {% endif %}
+  </aside>
+
+  <article class="prose">
+    {% if area.summary %}<p class="lead">{{ area.summary }}</p>{% endif %}
+    {{ content }}
+
+    {% assign pubs = site.data.publications %}
+    {% assign j = pubs.international | concat: pubs.domestic | where_exp: "p", "p.areas contains page.area" %}
+    {% assign c = pubs.conference | where_exp: "p", "p.areas contains page.area" %}
+    {% if j.size > 0 %}
+      <h2 id="publications">Related journal papers</h2>
+      <ol class="pub-list">{% for p in j %}{% include pub-item.html pub=p %}{% endfor %}</ol>
+    {% endif %}
+    {% if c.size > 0 %}
+      <details class="year-block related-conf">
+        <summary>Related conference papers <span class="muted">· {{ c.size }}</span></summary>
+        <ol class="pub-list">{% for p in c %}{% include pub-item.html pub=p %}{% endfor %}</ol>
+      </details>
+    {% endif %}
+  </article>
+</div>

@@ -1,0 +1,44 @@
+---
+layout: page
+title: Publications
+subtitle: 논문 · 학회 · 특허 · 기술이전
+permalink: /publications/
+redirect_from:
+  - /publication/
+---
+{% assign pubs = site.data.publications %}
+<p class="inline-links">
+  <a href="{{ site.lab.links.google_scholar }}">Google Scholar</a>
+  <a href="{{ site.lab.links.orcid }}">ORCID</a>
+  <a href="{{ site.lab.links.researchgate }}">ResearchGate</a>
+</p>
+
+{% assign sections = "international|domestic|conference|patents|tech_transfer" | split: "|" %}
+{% assign labels = "SCI(E) Journals|SCOPUS / KCI Journals|International Conferences|Patents|Technology Transfer" | split: "|" %}
+
+<nav class="jump" aria-label="Sections">
+  {% for key in sections %}{% assign list = pubs[key] %}{% if list and list.size > 0 %}<a href="#{{ key }}">{{ labels[forloop.index0] }} <span class="count">{{ list.size }}</span></a>{% endif %}{% endfor %}
+</nav>
+
+<div class="filter" role="group" aria-label="Filter by research area">
+  <button class="active" data-filter="all">All areas</button>
+  {% for a in site.data.research %}<button data-filter="{{ a.id }}">{{ a.title }}</button>{% endfor %}
+</div>
+
+{% for key in sections %}
+  {% assign list = pubs[key] %}
+  {% if list and list.size > 0 %}
+    <section class="pub-section" id="{{ key }}">
+      <h2>{{ labels[forloop.index0] }} <span class="count">{{ list.size }}</span></h2>
+      {% assign years = list | group_by: "year" | sort: "name" | reverse %}
+      {% for y in years %}
+        <div class="pub-year">
+          <h3>{{ y.name }}</h3>
+          <ol class="pub-list">
+            {% for p in y.items %}{% include pub-item.html pub=p %}{% endfor %}
+          </ol>
+        </div>
+      {% endfor %}
+    </section>
+  {% endif %}
+{% endfor %}

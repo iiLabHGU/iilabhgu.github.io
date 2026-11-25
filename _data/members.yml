@@ -1,0 +1,54 @@
+# 연구실 구성원.
+#   name     : 표시 이름 (영문 표기를 모르면 한글 이름만 넣어도 됨)
+#   name_ko  : 한글 이름 (name 이 한글이면 생략)
+#   photo    : /assets/images/people/ 아래 파일 (없으면 이니셜 아바타가 표시됨)
+#   history  : 학력/경력 (선택)
+#   interests: 연구분야 (선택)
+
+professor:
+  name: Young-Keun Kim
+  name_ko: 김영근
+  title: Associate Professor
+  photo: /assets/images/people/ykkim.jpg
+  email: ykkim@handong.edu
+  bio: >-
+    Young-Keun Kim leads the Industrial Intelligence Lab at the School of
+    Mechanical and Control Engineering, Handong Global University. His research
+    covers industrial AI, 2D/3D machine vision, and smart-material sensors and
+    vibration control.
+  career:
+    - "2014 – present · Associate Professor, School of Mechanical and Control Engineering, Handong Global University"
+    - "2020 · Visiting Scholar, Mechanical Engineering, Virginia Tech"
+    - "2017 – 2019 · Head of Mechanical and Control Engineering, HGU"
+    - "2014 · Ph.D., Mechanical Engineering, KAIST"
+
+# 그룹 순서대로 표시됩니다. 비어 있는 그룹(members: [])은 표시되지 않습니다.
+groups:
+  - title: Research Staff
+    members:
+      - name: Jae-Eun Park
+        name_ko: 박재은
+        degree: Ph.D., Post-Doc
+        photo: /assets/images/people/jepark.jpg
+        history:
+          - "2024~ Post-Doc, Mechanical and Control Engineering, HGU"
+          - "2024 Ph.D., HGU"
+          - "2019 M.S., HGU"
+        interests: Industrial AI, Reinforcement Learning
+
+  - title: Graduate Students
+    members:
+      # TODO: 영문 이름 표기와 연구분야를 입력하세요.
+      - name: 김명준
+        degree: M.S. Candidate
+        photo: /assets/images/people/mjkim.jpg
+        history: ["2024~ M.S. course, HGU"]
+      - name: 양지우
+        degree: M.S. Candidate
+        history: ["2024~ M.S. course, HGU"]
+      - name: 안지원
+        degree: M.S. Candidate
+        history: ["2026~ M.S. course, HGU"]
+
+  - title: Undergraduate Researchers
+    members: []   # TODO: 학부연구생 추가

@@ -1,0 +1,115 @@
+# 뉴스 목록. 최신 항목을 맨 위에 추가하세요. 홈 화면에는 위에서부터 4개가 표시됩니다.
+#   date  : 표시할 날짜 문자열 (예: "2024.11" 또는 "2024")
+#   tag   : Award | Paper | Project | Event | Conference | Tech Transfer 등
+#   title : 제목
+#   text  : 짧은 설명 (선택)
+#   image : 사진 경로 (선택)
+#   url   : 관련 링크 (선택)
+
+- date: "2024.11"
+  tag: Award
+  title: 한국공학교육학회 우수강의 교수상
+  text: 김영근 교수 — 딥러닝영상처리
+  image: /assets/images/news/2024-ksee-teaching-award.jpg
+
+- date: "2024.08"
+  tag: Award
+  title: Best Presentation in Session — IEEE INDIN 2024
+  text: 안창민 (IEEE INDIN 2024, Beijing)
+  image: /assets/images/news/2024-indin.jpg
+
+- date: "2024"
+  tag: Award
+  title: 논문 우수발표상 — 한국생산제조학회 춘계학술대회
+  text: 안창민, 박재은
+  image: /assets/images/news/2024-ksmte-award.jpg
+
+- date: "2024"
+  tag: Award
+  title: IOP Top Cited Paper Award — EEG-Inception
+  text: Joint research with Mechanical Engineering, Virginia Tech
+  image: /assets/images/news/2024-iop-top-cited.jpg
+
+- date: "2023.12"
+  tag: Conference
+  title: IEEE IEEM 2023 발표 (Singapore)
+  text: >-
+    강희윤 — A Deep Reinforcement Learning Approach for Cooling Parameter
+    Optimization in Steel Rebar Tempcore Process / 김예진 — Predicting
+    Tempering Temperature of Steel Rebar Using LSTM-DNN Model for Tempcore Process
+
+- date: "2023.10"
+  tag: Event
+  title: 현대차·기아 신제조기술전시회 『2023 울산 E-Forest TECH』 라이다 안전펜스 시연
+  text: 연구실에서 개발한 라이다 안전펜스 기술 시연 (10월 25~31일)
+
+- date: "2023.10"
+  tag: Conference
+  title: IEEE Sensors 2023 발표 (Vienna, Austria)
+  text: 송형석 — Automatic One-Shot LiDAR Alignment Inspection System using NIR Camera
+  image: /assets/images/news/2023-ieee-sensors.jpg
+
+- date: "2023"
+  tag: Project
+  title: 현대제철(포항) 산학협력 연구실 지정
+  text: >-
+    산업지능화 연구실이 현대제철 산학협력 연구실로 지정됨. 현대제철 전기로사업본부장
+    이성수 전무님과 포항 공장장 김판근 상무님 등 연구실 방문 및 산학협력 확대 논의
+  image: /assets/images/news/2023-hyundai-steel-lab.jpg
+
+- date: "2023.06"
+  tag: Thesis
+  title: 송형석 석사학위 논문 발표
+  text: One-Shot LiDAR Misalignment Inspection System without using LiDAR Point Cloud Data
+  image: /assets/images/news/2023-thesis-hssong.jpg
+
+- date: "2023.06"
+  tag: Conference
+  title: 제어로봇시스템학회 2023 학술대회 발표
+  text: 안창민 — 위험구역 침입 감지를 위한 라이다 렌더링 데이터셋 생성방법
+  image: /assets/images/news/2023-icros.jpg
+
+- date: "2023.05"
+  tag: Conference
+  title: 대한산업공학회 춘계학술대회 2023 발표 (제주)
+  text: >-
+    박재은 — 준지도학습 기반 봉강 표면결함 분류모델 설계를 위한 차원축소 기법 연구 /
+    강희윤 — 철근 템프코어 공정의 냉각변수 최적화를 위한 강화학습 모델 설계 기초연구 /
+    김예진 — 철근 항복강도 예측을 위한 시계열 냉각 변수 기반 LSTM-DNN 모델 설계
+  image: /assets/images/news/2023-kiie.jpg
+
+- date: "2023.02"
+  tag: Tech Transfer
+  title: 기술이전 — 차선 도색 자동화를 위한 노후 차선 인식 및 경계선 검출 알고리즘
+  text: (주) 성진에스이
+  image: /assets/images/research/lane-painting.jpg
+
+- date: "2022"
+  tag: Award
+  title: 우수논문상 — 대한기계학회 (본부)
+  text: 베어링 고장진단을 위한 진동신호 스펙트럼 기반 1D CNN 모델 연구 — 김예진, 김영근
+  image: /assets/images/news/2022-ksme-best-paper.jpg
+
+- date: "2022.05"
+  tag: Award
+  title: 캡스톤디자인경진대회 최우수상 — 대한기계학회 IT융합부문
+  text: 김예진, 전현직
+  image: /assets/images/news/2022-ksme-capstone.jpg
+
+- date: "2022.01"
+  tag: Project
+  title: AI 봉강결함분류기술 상용화 — 현대제철 포항공장 생산라인 적용
+  text: >-
+    김영근 교수 연구팀이 현대제철과 공동 개발한 인공지능(AI) 기반 제철 자동화 기술이
+    실제 기업 생산 현장에 적용돼 산학협력 모델로 평가받고 있다.
+  image: /assets/images/news/2022-hyundai-steel-ai.jpg
+  url: https://m.etnews.com/20220113000057
+
+- date: "2021.12"
+  tag: Project
+  title: 포항시 스마트시티 주차장 상용화
+  text: >-
+    WeSEE 스마트업과 협력하여 주차 여유 공간을 예측하는 포항시 스마트시티 주차안내 시스템
+    알고리즘 개발
+  image: /assets/images/research/parking-map.jpg
+  url: https://www.youtube.com/watch?v=MpNni2Jw3Zk

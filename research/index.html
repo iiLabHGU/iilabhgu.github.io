@@ -1,0 +1,67 @@
+---
+layout: page
+title: Research
+subtitle: 연구분야 — 품질검사·예측 · 이상탐지·고장진단 · 머신비전 · 스마트재료
+permalink: /research/
+---
+<p class="lead narrow">
+  We combine process domain knowledge with AI and deploy it on real production
+  lines: quality inspection, prediction and optimization; anomaly detection and
+  fault diagnosis of equipment; 2D/3D machine vision for automation and
+  safety; and smart materials for vibration control and sensing.
+</p>
+
+<div class="card-grid cols-4 compact">
+  {% for a in site.data.research %}{% if a.main %}
+    <a class="area-card" href="{{ '/research/' | append: a.id | append: '/' | relative_url }}">
+      <div class="area-img"><img src="{{ a.image | relative_url }}" alt="" loading="lazy"></div>
+      <div class="area-body">
+        <h3>{{ a.title }}</h3>
+        <p class="area-ko">{{ a.title_ko }}</p>
+        <p>{{ a.short | default: a.summary }}</p>
+      </div>
+    </a>
+  {% endif %}{% endfor %}
+</div>
+
+<section class="research-cases" id="projects">
+  <h2>Selected Projects <span class="h-ko">대표 사례 ’20–’26</span></h2>
+  {% for a in site.data.research %}{% if a.main %}
+    {% assign ks = site.data.highlights.cases | where: "area", a.id %}
+    {% if ks.size > 0 %}
+      <div class="rc-group">
+        <h3 class="rc-head"><a href="{{ '/research/' | append: a.id | append: '/' | relative_url }}">{{ a.title }}</a> <span class="h-ko">{{ a.title_ko }}</span></h3>
+        <div class="case-list">
+          {% for k in ks %}
+            <article class="case">
+              {% if k.image %}<div class="case-img"><img src="{{ k.image | relative_url }}" alt="" loading="lazy"></div>{% endif %}
+              <div class="case-body">
+                <p class="case-meta">{{ k.year }} · {{ k.partner }}</p>
+                <h4>{{ k.title }}</h4>
+                <p class="case-ko">{{ k.title_ko }}</p>
+                <p class="case-text">{{ k.text }}</p>
+                <ul class="case-results">{% for r in k.results %}<li>{{ r }}</li>{% endfor %}</ul>
+              </div>
+            </article>
+          {% endfor %}
+        </div>
+      </div>
+    {% endif %}
+  {% endif %}{% endfor %}
+</section>
+
+{% assign others = site.data.research | where_exp: "a", "a.main != true" %}
+{% if others.size > 0 %}
+<h2 class="other-head">Other Research</h2>
+<div class="other-research">
+  {% for a in site.data.research %}{% unless a.main %}
+    <a class="other-card" href="{{ '/research/' | append: a.id | append: '/' | relative_url }}">
+      <img src="{{ a.image | relative_url }}" alt="" loading="lazy">
+      <div>
+        <h3>{{ a.title }} <span class="h-ko">{{ a.title_ko }}</span></h3>
+        <p>{{ a.summary }}</p>
+      </div>
+    </a>
+  {% endunless %}{% endfor %}
+</div>
+{% endif %}

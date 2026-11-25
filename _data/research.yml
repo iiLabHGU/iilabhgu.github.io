@@ -1,0 +1,66 @@
+# 연구분야 목록. 홈/연구 페이지 카드, 연구 상세 페이지(research/<id>.md) 사이드바, 논문 필터에 사용됩니다.
+#   id     : 상세 페이지 파일명 및 논문(publications.yml)의 areas 값과 일치해야 함
+#   main   : true 이면 홈과 연구 페이지에 큰 카드로 표시되는 핵심 분야 (현재 4개), false 이면 "Other research"
+#   image  : 카드 이미지 경로
+#   short  : Research 페이지 카드에 쓰는 한 줄 요약
+#   topics : 카드에 표시할 세부 주제 (한글)
+
+- id: quality
+  main: true
+  title: Process Quality Inspection, Prediction & Optimization
+  title_ko: 공정 품질검사·예측·최적화
+  image: /assets/images/research/area-industrial-ai.jpg
+  short: Defect detection, quality prediction and process optimization from production data.
+  summary: >-
+    AI for manufacturing quality: detecting and classifying defects on the
+    line, predicting material properties and product quality from process
+    data, and optimizing operating conditions.
+  topics:
+    - 품질 결함 검출 · 분류
+    - 물성치 · 품질 예측
+    - 공정 운영 조건 최적화
+
+- id: diagnosis
+  main: true
+  title: Equipment Anomaly Detection & Fault Diagnosis
+  title_ko: 설비 이상탐지·고장진단
+  image: /assets/images/research/area-diagnosis.jpg
+  short: Process-aware anomaly detection and fault diagnosis of plant equipment.
+  summary: >-
+    Equipment monitoring that uses process knowledge: graph models of sensors,
+    equipment and process flow for anomaly detection, fault diagnosis of
+    rotating machinery, and tracing the root cause of failures.
+  topics:
+    - 공정 지식 연계 설비 모니터링
+    - 설비 이상 탐지 및 진단
+    - 고장 원인 추적
+
+- id: vision
+  main: true
+  title: Machine Vision for Automation & Safety
+  title_ko: 자동화·안전 머신비전
+  image: /assets/images/research/area-safety-vision.jpg
+  short: 2D/3D vision and LiDAR for inspection, alignment and worker safety.
+  summary: >-
+    2D camera and 3D LiDAR systems for part quality and assembly inspection,
+    LiDAR calibration and alignment inspection, and detection of people and
+    abnormal behavior in hazardous zones.
+  topics:
+    - 2D/3D 영상 기반 부품 품질 검사
+    - 조립 검사 및 자동화 시스템
+    - 위험구역 인체 · 이상행동 탐지
+
+- id: smart-material
+  main: true
+  title: Smart Materials & Vibration Control
+  title_ko: 스마트재료·진동제어
+  image: /assets/images/research/area-smart-material.jpg
+  short: Smart-material modules, RL control and flexible sensors for vibration.
+  summary: >-
+    Stiffness-variable vibration-control modules based on magnetorheological
+    materials, reinforcement-learning based vibration control, and flexible
+    sensors for vibration, magnetic field, and friction.
+  topics:
+    - 강성가변 진동제어 모듈
+    - 강화학습 기반 진동제어 기법
+    - Flexible 센서 (진동, 자기장, 마찰)

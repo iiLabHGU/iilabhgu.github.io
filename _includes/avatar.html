@@ -1,0 +1,7 @@
+{% comment %} include.person : 사진이 없으면 이름 첫 글자로 아바타 생성 {% endcomment %}
+{% assign m = include.person %}
+{% if m.photo %}
+  <img class="avatar" src="{{ m.photo | relative_url }}" alt="{{ m.name }}" loading="lazy">
+{% else %}
+  <span class="avatar avatar-initial" aria-hidden="true">{{ m.name_ko | default: m.name | slice: 0 }}</span>
+{% endif %}

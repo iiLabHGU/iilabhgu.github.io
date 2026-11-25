@@ -1,0 +1,78 @@
+---
+layout: page
+title: People
+subtitle: 구성원
+permalink: /people/
+---
+{% assign prof = site.data.members.professor %}
+<section class="pi">
+  {% include avatar.html person=prof %}
+  <div>
+    <p class="eyebrow">Professor</p>
+    <h2>{{ prof.name }} <span class="name-ko">{{ prof.name_ko }}</span></h2>
+    <p class="muted">{{ prof.title }}, {{ site.lab.affiliation }}</p>
+    <p>{{ prof.bio }}</p>
+    <ul class="career">
+      {% for c in prof.career %}<li>{{ c }}</li>{% endfor %}
+    </ul>
+    <p class="inline-links">
+      <a href="mailto:{{ prof.email }}">{{ prof.email }}</a>
+      <a href="{{ site.lab.links.google_scholar }}">Google Scholar</a>
+      <a href="{{ site.lab.links.orcid }}">ORCID</a>
+      <a href="{{ site.lab.links.researchgate }}">ResearchGate</a>
+    </p>
+  </div>
+</section>
+
+{% for g in site.data.members.groups %}
+  {% if g.members.size > 0 %}
+  <h2 class="group-title">{{ g.title }}</h2>
+  <div class="member-grid">
+    {% for m in g.members %}
+      <div class="member">
+        {% include avatar.html person=m %}
+        <p class="member-name">{{ m.name }}</p>
+        {% if m.name_ko %}<p class="member-ko">{{ m.name_ko }}</p>{% endif %}
+        {% if m.degree %}<p class="member-degree">{{ m.degree }}</p>{% endif %}
+        {% if m.interests %}<p class="member-int">{{ m.interests }}</p>{% endif %}
+        {% if m.history %}<ul class="member-hist">{% for h in m.history %}<li>{{ h }}</li>{% endfor %}</ul>{% endif %}
+        {% if m.email %}<a class="member-mail" href="mailto:{{ m.email }}">{{ m.email }}</a>{% endif %}
+      </div>
+    {% endfor %}
+  </div>
+  {% endif %}
+{% endfor %}
+
+<h2 class="group-title" id="alumni">Alumni <span class="name-ko">졸업생</span></h2>
+
+<h3>M.S. / Ph.D.</h3>
+<div class="alumni-grid">
+  {% for a in site.data.alumni.graduate %}
+    <div class="alum">
+      {% include avatar.html person=a %}
+      <div>
+        <p class="member-name">{{ a.name }} {% if a.name_ko %}<span class="name-ko">{{ a.name_ko }}</span>{% endif %}</p>
+        <p class="member-degree">{{ a.degree }}, {{ a.year }}</p>
+        {% if a.now %}<p class="alum-now">{{ a.now }}</p>{% endif %}
+      </div>
+    </div>
+  {% endfor %}
+</div>
+
+<h3>Undergraduate Research</h3>
+{% assign ugrad_years = site.data.alumni.undergraduate | group_by: "year" | sort: "name" | reverse %}
+{% for y in ugrad_years %}
+  <details class="year-block"{% if forloop.first %} open{% endif %}>
+    <summary>{{ y.name }} <span class="muted">· {{ y.items.size }}</span></summary>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Name</th><th>Project</th><th>Current</th></tr></thead>
+        <tbody>
+          {% for a in y.items %}
+            <tr><td class="nowrap">{{ a.name }}</td><td>{{ a.project }}</td><td>{{ a.now }}</td></tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </details>
+{% endfor %}
